@@ -78,6 +78,23 @@ python -m src.core.main
 
 Les résultats (données consolidées, statistiques, brouillons) sont générés dans `data/generated/` et `data/drafts/` par défaut.
 
+## 🖥️ Interface Graphique (UI)
+
+Une interface Streamlit est disponible pour explorer les données et générer des articles interactivement.
+
+Running the UI:
+
+```bash
+streamlit run src/ui/app.py
+```
+
+Fonctionnalités :
+
+- 📂 Chargement automatique des derniers fichiers consolidés.
+- 🔍 Recherche et filtrage interactif des exoplanètes.
+- 📊 Visualisation des données brutes Pydantic/JSON.
+- ✨ Génération instantanée de code Wikitext copiable.
+
 ## Commandes de développement
 
 Le projet utilise un `Makefile` pour simplifier les tâches courantes :

@@ -1,8 +1,0 @@
-name,binaryflag,mass,radius,period,semimajoraxis,eccentricity,periastron,longitude,ascendingnode,inclination,temperature,age,discoverymethod,discoveryyear,lastupdate,system_rightascension,system_declination,system_distance,hoststar_mass,hoststar_radius,hoststar_metallicity,hoststar_temperature,hoststar_age,list
-Kepler-1032 b,0,,0.167,3.290117950,,,,,,,,,transit,2016,16/05/10,19 19 43.4040,+40 05 51.8400,683.854,0.77,0.71,0.16,4647.0,,Confirmed planets
-HD 154857 b,0,2.24,,408.6,1.291,0.46,57,,,,336.0,,RV,2004,14/01/25,17 11 15.7217,-56 40 50.8706,64.2,1.718,2.31,-0.31,5508,,Confirmed planets
-HD 154857 c,0,2.58,,3452,5.36,0.06,352,,,,,,RV,2014,14/01/25,17 11 15.7217,-56 40 50.8706,64.2,1.718,2.31,-0.31,5508,,Confirmed planets
-Kepler-994 b,0,,0.143,1.151166510,,,,,,,,,transit,2016,16/05/10,19 16 17.3254,+47 24 25.3965,189.186,0.56,0.54,-0.13,3934.0,,Confirmed planets
-Kepler-1350 b,0,,0.225,4.496860400,,,,,,,,,transit,2016,16/05/10,19 13 00.1410,+46 40 46.5233,343.926,0.55,0.53,-0.06,3827.0,,Confirmed planets
-Kepler-1350 c,0,,0.154,1.766789060,,,,,,,,,transit,2016,16/05/10,19 13 00.1410,+46 40 46.5233,343.926,0.55,0.53,-0.06,3827.0,,Confirmed planets
-Kepler-1268 b,0,,0.181,40.990398600,,,,,,,,,transit,2016,16/05/10,19 11 21.2310,+43 09 11.6529,1945.15,1.06,1.09,0.05,5904.0,,Confirmed planets

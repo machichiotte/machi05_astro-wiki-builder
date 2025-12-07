@@ -173,11 +173,7 @@ cython_debug/
 # PyPI configuration file
 .pypirc
 
-output/
-drafts/
-drafts copy/
-data/*.json
-data/cache/nasa_exoplanet_archive/
-data/generated
-
-tools/lire_excel
+# Données générées et cache (ne pas versionner)
+data/cache/
+data/drafts/
+data/generated/statistics/

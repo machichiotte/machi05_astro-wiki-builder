@@ -58,7 +58,9 @@ def fetch_and_ingest_data(collectors: dict[str, Any], processor: DataProcessor) 
             logger.info(f"Aucune étoile récupérée depuis {source_name}.")
 
 
-def export_consolidated_data(processor: DataProcessor, output_dir: str, timestamp: str) -> None:
+def export_consolidated_data(
+    processor: DataProcessor, output_dir: str, timestamp: str, sources_list: list[str] = None
+) -> None:
     """
     Exporte les données consolidées au format CSV.
 
@@ -66,11 +68,28 @@ def export_consolidated_data(processor: DataProcessor, output_dir: str, timestam
         processor: Instance du DataProcessor contenant les données
         output_dir: Répertoire de sortie
         timestamp: Timestamp pour nommer les fichiers
+        sources_list: Liste des sources utilisées pour générer le nom du fichier
     """
     logger.info("Export des données consolidées...")
     try:
-        consolidated_path = f"{output_dir}/consolidated/exoplanets_consolidated_{timestamp}.csv"
+        # Générer le nom de fichier basé sur les sources
+        if sources_list:
+            # Mapper les noms de sources vers des abréviations
+            source_abbrev = {
+                "nasa_exoplanet_archive": "nea",
+                "exoplanet_eu": "exoplanet_eu",
+                "open_exoplanet": "open_exoplanet",
+            }
+            # Créer le préfixe à partir des sources
+            source_prefix = "_".join(
+                source_abbrev.get(source, source) for source in sorted(sources_list)
+            )
+        else:
+            source_prefix = "consolidated"
+
+        consolidated_path = f"{output_dir}/consolidated/{source_prefix}_{timestamp}.csv"
         processor.export_all_exoplanets("csv", consolidated_path)
+        logger.info(f"Données consolidées exportées vers : {consolidated_path}")
     except Exception as e:
         logger.error(f"Erreur lors de l'export des données consolidées : {e}")
 

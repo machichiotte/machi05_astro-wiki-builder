@@ -66,7 +66,8 @@ def execute_pipeline(args: argparse.Namespace) -> None:
 
     # Étape 5 : Export des données consolidées
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    export_consolidated_data(processor, args.output_dir, timestamp)
+    sources_list = list(collectors.keys())  # Récupérer les noms des sources utilisées
+    export_consolidated_data(processor, args.output_dir, timestamp, sources_list)
 
     # Étape 6 : Génération et affichage des statistiques
     stat_service = services[2]  # StatisticsService est à l'index 2
