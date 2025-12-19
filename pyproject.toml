@@ -28,6 +28,8 @@ pytz = "^2025.2"
 wikipedia = "^1.4.0"
 pyvo = "^1.6.2"
 astropy = "^7.1.1"
+streamlit = "^1.40.0"
+plotly = "^5.24.0"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.0.0"
