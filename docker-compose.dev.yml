@@ -1,0 +1,11 @@
+services:
+  app:
+    extends:
+      file: docker-compose.yml
+      service: app
+    env_file:
+      - .env.development
+    volumes:
+      - .:/app
+    command: streamlit run src/ui/app.py --server.port 3005 --server.address 0.0.0.0
+    restart: "no"

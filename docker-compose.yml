@@ -1,0 +1,14 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: machi05_app:latest
+    container_name: machi05_app
+    ports:
+      - "${STREAMLIT_SERVER_PORT:-3005}:3005"
+    env_file:
+      - .env.production
+    volumes:
+        - ./data:/app/data
+    restart: always
