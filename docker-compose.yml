@@ -3,12 +3,12 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: machi05_app:latest
-    container_name: machi05_app
+    image: machi05_astro-wiki:latest
+    container_name: machi05_astro-wiki
     ports:
       - "${STREAMLIT_SERVER_PORT:-3005}:3005"
     env_file:
       - .env.production
     volumes:
-        - ./data:/app/data
+      - ./data:/app/data
     restart: always

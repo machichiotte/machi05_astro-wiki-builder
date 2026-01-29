@@ -38,6 +38,16 @@ pip install -e .[dev]
 make install  # Installe pre-commit et les hooks
 ```
 
+### 🐳 Run with Docker (Recommended)
+
+```bash
+# Start the full stack (Astro + Tools)
+docker compose up -d
+
+# View logs
+docker compose logs -f
+```
+
 ## Structure du projet
 
 ```
